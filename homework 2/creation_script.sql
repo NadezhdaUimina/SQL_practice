@@ -7,9 +7,9 @@ DROP TABLE IF EXISTS photo_albums;
 CREATE TABLE photo_albums (
 	id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
 	name VARCHAR(100),
-    user_id BIGINT UNSIGNED NOT NULL,
-    
-    FOREIGN KEY (user_id) REFERENCES users(id)
+   	user_id BIGINT UNSIGNED NOT NULL,
+
+	FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 -- таблица фотографий
@@ -20,7 +20,3 @@ CREATE TABLE photos (
 	
 	FOREIGN KEY (album_id) REFERENCES photo_albums(id)
 );
-
-
-
-
