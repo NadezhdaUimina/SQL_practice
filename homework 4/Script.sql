@@ -8,7 +8,7 @@ SELECT user_id, (
 	FROM users 
 	WHERE id = user_id) AS name, COUNT(user_id) AS count
 FROM users_communities
-GROUP BY user_id 
+GROUP BY user_id;
 
 /*
  * 2. Подсчитать количество пользователей в каждом сообществе.
@@ -19,7 +19,7 @@ SELECT community_id,(
 	FROM communities 
 	WHERE id = community_id) AS communities,  COUNT(community_id) AS count
 FROM users_communities
-GROUP BY community_id  
+GROUP BY community_id;  
 
 /*
  * 3. Пусть задан некоторый пользователь. Из всех пользователей соц. сети найдите человека, который больше всех общался с выбранным пользователем (написал ему сообщений).
@@ -59,5 +59,5 @@ WHERE user_id IN (
 	SELECT user_id
 	FROM likes)
 GROUP BY gender 
-LIMIT 1
+LIMIT 1;
 
