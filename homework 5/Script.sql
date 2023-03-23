@@ -18,6 +18,6 @@ DROP VIEW v_count_user_communities;
 -- Вывести поля: news_count (количество новостей), user_id (номер пользователя), user_email (email пользователя). 
 -- Попробовать решить с помощью CTE или с помощью обычного JOIN.
 SELECT COUNT(*), user_id, email
-FROM media as m
-JOIN users as u on u.id = m.user_id 
+FROM media AS m
+JOIN users AS u ON u.id = m.user_id 
 GROUP BY user_id;
